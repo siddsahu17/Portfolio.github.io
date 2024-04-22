@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7669a62497.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#certificate">Certifications</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="header_text">
+            <p>FY-Btech Electronics and Telecommunications</p>
+            <h1>Hello I'm <span>Siddhant Kumar Sahu</span></h1>
+            <p>             </p>
+            <p>             </p>
+        </div>
+    </div>
+</div>
+<!-- -----------------about----------------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/Profile.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm Siddhant Kumar Sahu, a passionate FY Electronics and Telecommunications MIT Academy Of Engeneering Student. I love creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('coding')">Coding-Profile</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>Beginner in Python Language</li>
+                        <li><span>C/C++</span><br>Beginner in C/C++ Language</li>
+                        <li><span>HTML</span><br>Beginner in HTML/CSS Language</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="coding">
+                    <ul>
+                        <li><span>Code-Chef<br></span><a href="https://www.codechef.com/users/siddhantsahu17">Profile</a></li>
+                        <li><span>GeeksForGeeks<br></span><a href="https://auth.geeksforgeeks.org/user/siddhantsahu17">Profile</a></li>
+                        <li><span>CodeForces<br></span><a href="https://codeforces.com/profile/SiddSahu">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 Class 10<sup>th</sup></span><br>94% Percentage CBSE Boards</li>
+                        <li><span>2023 Class 12<sup>th</sup></span><br>80% Percentage CBSE Boards<br>85% Perceentile MHT-CET<br>92% Perceentile JEE-Mains</li>
+                        <li><span>2023 - continue B-tech</span><br>Sem-1 -- 8.54 SGPA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- certifications -->
+<div id="certificate">
+    <div class="container">
+        <h1 class="sub-title">My Certifications</h1>
+        <h2>Python Certifiactes</h2>
+        <div class="certificate-list">
+            <p><img src="certificate/PCAP.png" width="500" height="250"> PCAP Python Cisco Academy</p>
+            <p><img src="certificate/P1.png" width="500" height="250"> Python Essentials 1 Cisco Academy</p>
+            <p><img src="certificate/P2.png" width="500" height="250"> Python Essentials 2 Cisco Academy</p>
+        </div>
+    </div>
+</div>
+
+<!-- -----------------contact----------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-brands fa-google"></i>202301070159@mitaoe.ac.in</p>
+                <p><i class="fa-solid fa-phone"></i>+91 8369989998</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/sidd_1765_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://mitaoe.pod.ai/d/6DET3H/profile/"><i class="fa-solid fa-user"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your E-Mail id" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Siddhant Kumar Sahu <i class="fa-solid fa-crown"></i></p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx_ajPUmCFQx19v_cJ0kF7Oe9wO0rosaz7UQJOEq9AfocKdBQBMymRq6p84Zi_GGxrf/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Succesfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            } , 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
